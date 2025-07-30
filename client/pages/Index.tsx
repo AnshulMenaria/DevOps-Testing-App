@@ -76,7 +76,7 @@ export default function Index() {
   const technologies = [
     {
       name: "Docker",
-      icon: Docker,
+      icon: Container,
       description: "Containerization platform for consistent deployments",
       color: "text-blue-600"
     },
