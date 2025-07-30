@@ -1,43 +1,48 @@
-import React from 'react';
+import React from "react";
 
 export default function Index() {
   const blogPosts = [
     {
       id: 1,
-      title: "Mastering Docker Containerization: From Development to Production",
-      excerpt: "Learn how to build, optimize, and deploy Docker containers with best practices for scalability and security.",
+      title:
+        "Mastering Docker Containerization: From Development to Production",
+      excerpt:
+        "Learn how to build, optimize, and deploy Docker containers with best practices for scalability and security.",
       readTime: "8 min read",
       date: "Nov 15, 2024",
       tags: ["Docker", "Containers", "DevOps"],
-      featured: true
+      featured: true,
     },
     {
       id: 2,
       title: "Kubernetes Orchestration: Advanced Deployment Strategies",
-      excerpt: "Explore rolling updates, canary deployments, and blue-green strategies in production Kubernetes environments.",
+      excerpt:
+        "Explore rolling updates, canary deployments, and blue-green strategies in production Kubernetes environments.",
       readTime: "12 min read",
       date: "Nov 12, 2024",
       tags: ["Kubernetes", "Orchestration", "Production"],
-      featured: true
+      featured: true,
     },
     {
       id: 3,
       title: "Jenkins CI/CD Pipeline: Testing & Automation Best Practices",
-      excerpt: "Build robust testing pipelines with Jenkins, including automated testing, security scanning, and deployment strategies.",
+      excerpt:
+        "Build robust testing pipelines with Jenkins, including automated testing, security scanning, and deployment strategies.",
       readTime: "10 min read",
       date: "Nov 8, 2024",
       tags: ["Jenkins", "CI/CD", "Testing"],
-      featured: false
+      featured: false,
     },
     {
       id: 4,
       title: "Multi-Platform Testing with Docker Compose",
-      excerpt: "Set up comprehensive testing environments using Docker Compose for microservices architecture.",
+      excerpt:
+        "Set up comprehensive testing environments using Docker Compose for microservices architecture.",
       readTime: "6 min read",
       date: "Nov 5, 2024",
       tags: ["Docker", "Testing", "Microservices"],
-      featured: false
-    }
+      featured: false,
+    },
   ];
 
   const technologies = [
@@ -45,24 +50,24 @@ export default function Index() {
       name: "Docker",
       description: "Containerization platform for consistent deployments",
       color: "text-blue-600",
-      icon: "📦"
+      icon: "📦",
     },
     {
       name: "Kubernetes",
       description: "Container orchestration for scalable applications",
       color: "text-purple-600",
-      icon: "⚙️"
+      icon: "⚙️",
     },
     {
       name: "Jenkins",
       description: "Automation server for CI/CD pipelines",
       color: "text-orange-600",
-      icon: "🔧"
-    }
+      icon: "🔧",
+    },
   ];
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.filter(post => !post.featured);
+  const featuredPosts = blogPosts.filter((post) => post.featured);
+  const recentPosts = blogPosts.filter((post) => !post.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -75,8 +80,12 @@ export default function Index() {
                 <span className="text-white text-xl">⚡</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-slate-900">DevOps Central</h1>
-                <p className="text-sm text-slate-600">Professional DevOps & Testing</p>
+                <h1 className="text-xl font-bold text-slate-900">
+                  DevOps Central
+                </h1>
+                <p className="text-sm text-slate-600">
+                  Professional DevOps & Testing
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -101,12 +110,16 @@ export default function Index() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
               Professional
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> DevOps </span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                {" "}
+                DevOps{" "}
+              </span>
               & Testing Solutions
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Master Docker containerization, Kubernetes orchestration, and Jenkins automation 
-              with comprehensive guides, best practices, and real-world testing scenarios.
+              Master Docker containerization, Kubernetes orchestration, and
+              Jenkins automation with comprehensive guides, best practices, and
+              real-world testing scenarios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg flex items-center justify-center">
@@ -124,16 +137,24 @@ export default function Index() {
       <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Core Technologies</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Core Technologies
+            </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Deep dive into the essential tools that power modern DevOps workflows
+              Deep dive into the essential tools that power modern DevOps
+              workflows
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {technologies.map((tech) => (
-              <div key={tech.name} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 hover:border-slate-300">
+              <div
+                key={tech.name}
+                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 hover:border-slate-300"
+              >
                 <div className="text-center">
-                  <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-slate-100 flex items-center justify-center text-2xl ${tech.color}`}>
+                  <div
+                    className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-slate-100 flex items-center justify-center text-2xl ${tech.color}`}
+                  >
                     {tech.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{tech.name}</h3>
@@ -150,21 +171,31 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-2">Featured Articles</h2>
-              <p className="text-slate-600">In-depth guides for professional DevOps practices</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-2">
+                Featured Articles
+              </h2>
+              <p className="text-slate-600">
+                In-depth guides for professional DevOps practices
+              </p>
             </div>
             <span className="hidden md:flex items-center px-3 py-1 border border-slate-300 rounded-full text-sm">
               ⭐ Editor's Choice
             </span>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {featuredPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-blue-200 group">
+              <div
+                key={post.id}
+                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-blue-200 group"
+              >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex gap-2 flex-wrap">
                     {post.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">
+                      <span
+                        key={tag}
+                        className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -181,7 +212,9 @@ export default function Index() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-500">{post.date}</span>
-                  <span className="text-slate-400 group-hover:text-blue-600 transition-all transform group-hover:translate-x-1">→</span>
+                  <span className="text-slate-400 group-hover:text-blue-600 transition-all transform group-hover:translate-x-1">
+                    →
+                  </span>
                 </div>
               </div>
             ))}
@@ -195,16 +228,26 @@ export default function Index() {
       <section className="py-16 bg-white/30">
         <div className="container mx-auto px-4">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Recent Articles</h2>
-            <p className="text-slate-600">Stay updated with the latest DevOps practices and tutorials</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">
+              Recent Articles
+            </h2>
+            <p className="text-slate-600">
+              Stay updated with the latest DevOps practices and tutorials
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {recentPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition-all duration-300 cursor-pointer hover:border-slate-300 border group">
+              <div
+                key={post.id}
+                className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition-all duration-300 cursor-pointer hover:border-slate-300 border group"
+              >
                 <div className="flex gap-2 flex-wrap mb-3">
                   {post.tags.slice(0, 2).map((tag) => (
-                    <span key={tag} className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -233,8 +276,8 @@ export default function Index() {
               Ready to Level Up Your DevOps Skills?
             </h2>
             <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-              Join thousands of professionals mastering Docker, Kubernetes, and Jenkins 
-              with our comprehensive testing and deployment guides.
+              Join thousands of professionals mastering Docker, Kubernetes, and
+              Jenkins with our comprehensive testing and deployment guides.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-3 rounded-lg flex items-center justify-center">
@@ -258,7 +301,9 @@ export default function Index() {
               </div>
               <div>
                 <p className="text-white font-semibold">DevOps Central</p>
-                <p className="text-slate-400 text-sm">Professional DevOps & Testing</p>
+                <p className="text-slate-400 text-sm">
+                  Professional DevOps & Testing
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-6 text-slate-400 text-sm">
