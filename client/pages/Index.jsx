@@ -81,7 +81,7 @@ export default function Index() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-slate-900">
-                  DevOps Central
+                  DevOps Centralll
                 </h1>
                 <p className="text-sm text-slate-600">
                   Professional DevOps & Testing
